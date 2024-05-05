@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Auto Open Link</title>
+<link rel="stylesheet" href="demo.css">
+</head>
+<body>
+    <center>  <a href="cv.png" target="a" id="auto"> <button class="a" >Đặc điểm</button></a>
+        <a href="kl.png" target="a"> <button class="a">Các kỷ lục</button></a>
+        <a href="dc.png" target="a"> <button class="a">Di chuyển</button></a>
+        <a href="gv.png" target="a"> <button class="a">Giá vé</button></a>
+        <a href="tq.png" target="a"> <button class="a">Thời điểm tham quan</button></a>
+        <a href="sq.png" target="a"> <button class="a">Bí quyết sống ảo</button></a>
+       <iframe name="a" width="70%" height="1500px" frameborder="0" scrolling="no"></iframe></center>
+  
+
+<script>
+// Lắng nghe sự kiện click trên liên kết
+document.getElementById("auto").addEventListener("click", function() {
+  // Lấy tất cả các nút trong thẻ a và loại bỏ lớp 'selected' (nếu có)
+  var buttons = this.getElementsByTagName("button");
+  for (var i = 0; i < buttons.length; i++) {
+    buttons[i].classList.remove("selected");
+  }
+  // Thêm lớp 'selected' cho nút được nhấp vào
+  event.target.classList.add("selected");
+});
+
+</script>
+</body>
+</html>
